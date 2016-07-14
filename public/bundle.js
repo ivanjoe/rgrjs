@@ -20287,7 +20287,7 @@
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 	
 	var _jquery = __webpack_require__(/*! jquery */ 161);
@@ -20299,13 +20299,13 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var API = {
-		fetchLinks: function fetchLinks() {
-			console.log("1. In API");
-			// Ajax request to read /data/links
-			(0, _jquery.get)("/data/links").done(function (resp) {
-				_ServerActions2.default.receiveLinks(resp);
-			});
-		}
+	  fetchLinks: function fetchLinks() {
+	    (0, _jquery.post)("/graphql", {
+	      query: "{\n                links {\n                  _id,\n                  title,\n                  url\n                }\n              }"
+	    }).done(function (resp) {
+	      _ServerActions2.default.receiveLinks(resp.data.links);
+	    });
+	  }
 	};
 	
 	exports.default = API;
