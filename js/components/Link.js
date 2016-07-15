@@ -8,7 +8,7 @@ class Link extends React.Component {
       <li>
         <a href={link.url}>{link.title}</a>
       </li>
-      );
+    );
   }
 }
 
