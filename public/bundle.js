@@ -49,8 +49,6 @@
 
 	"use strict";
 	
-	var _templateObject = _taggedTemplateLiteral(["\n    {\n      links {\n        title\n      }\n    }\n  "], ["\n    {\n      links {\n        title\n      }\n    }\n  "]);
-	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -69,11 +67,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-	
 	_reactDom2.default.render(_react2.default.createElement(_Main2.default, null), document.getElementById('react'));
 	
-	console.log(_reactRelay2.default.QL(_templateObject));
+	console.log(function () {
+	  throw new Error("Relay transform error ``You supplied a GraphQL document named `app` with invalid syntax. It must start with `fragment`, `mutation`, `query`, or `subscription`.`` in file `/Users/ikub/Projects/rgrjs/js/app.js`. Try updating your GraphQL schema if an argument/field/type was recently added.");
+	}());
 
 /***/ },
 /* 1 */
