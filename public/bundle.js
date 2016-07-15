@@ -70,7 +70,21 @@
 	_reactDom2.default.render(_react2.default.createElement(_Main2.default, null), document.getElementById('react'));
 	
 	console.log(function () {
-	  throw new Error("Relay transform error ``You supplied a GraphQL document named `app` with invalid syntax. It must start with `fragment`, `mutation`, `query`, or `subscription`.`` in file `/Users/ikub/Projects/rgrjs/js/app.js`. Try updating your GraphQL schema if an argument/field/type was recently added.");
+	  return {
+	    children: [{
+	      fieldName: "title",
+	      kind: "Field",
+	      metadata: {},
+	      type: "String"
+	    }],
+	    fieldName: "links",
+	    kind: "Query",
+	    metadata: {
+	      isPlural: true
+	    },
+	    name: "Test",
+	    type: "Link"
+	  };
 	}());
 
 /***/ },
