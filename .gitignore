@@ -27,3 +27,5 @@ chrome-user-data
 *.iml
 .vscode
 data/schema.json
+public/bundle.js
+public/bundle.js.map
