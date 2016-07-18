@@ -12,7 +12,7 @@ class Main extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     // Mutate
-    Relay.Store.update(
+    Relay.Store.commitUpdate(
       new CreateLinkMutation({
         title: this.refs.newTitle.value,
         url: this.refs.newUrl.value,
@@ -50,7 +50,7 @@ class Main extends React.Component {
 
 Main = Relay.createContainer(Main, {
   initialVariables: {
-    limit: 10
+    limit: 100
   },
   fragments: {
     store: () => Relay.QL`
