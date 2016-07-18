@@ -15,9 +15,9 @@ class Main extends React.Component {
 		return (
 			<div>
 				<h3>Links</h3>
-        <select onChange={this.setLimit}>
+        <select onChange={this.setLimit} defaultValue="5">
           <option value ="5">5</option>
-          <option value ="10" selected>10</option>
+          <option value ="10">10</option>
         </select>
 				<ul>
 					{content}
